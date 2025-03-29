@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Length Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cloudflareStyle.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <button class="toggle-btn" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+  <nav style="background: #4361ee; padding: 10px;">
+    <a href="index.html" style="color: white; margin: 0 10px; text-decoration: none;">Home</a>
+    <a href="about.html" style="color: white; margin: 0 10px; text-decoration: none;">About</a>
+    <a href="contact.html" style="color: white; margin: 0 10px; text-decoration: none;">Contact</a>
+    <a href="privacy.html" style="color: white; margin: 0 10px; text-decoration: none;">Privacy</a>
+</nav>   
+    <div class="container">
+        <header>
+            <h1>Ultimate Length Converter</h1>
+            <p class="subtitle">Convert between various length units with precision and ease</p>
+        </header>
+        
+        <main>
+            <div class="converter-card">
+                <div class="converter-header">
+                    <h2 class="converter-title">
+                        <i class="fas fa-ruler-combined"></i> Unit Converter
+                    </h2>
+                    <div class="converter-actions">
+                        <i class="fas fa-history" title="Conversion History"></i>
+                    </div>
+                </div>
+                
+                <div class="converter-body">
+                    <div class="input-group">
+                        <label for="fromValue">Value</label>
+                        <input type="number" id="fromValue" placeholder="Enter value" step="any">
+                    </div>
+                    
+                    <button class="swap-btn" id="swapUnits">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    
+                    <div class="input-group">
+                        <label for="toValue">Result</label>
+                        <input type="number" id="toValue" placeholder="Result" readonly>
+                    </div>
+                </div>
+                
+                <div class="converter-body" style="margin-top: 1rem;">
+                    <div class="unit-selector">
+                        <label for="fromUnit">From Unit</label>
+                        <select id="fromUnit">
+                            <option value="millimeters">Millimeters (mm)</option>
+                            <option value="centimeters">Centimeters (cm)</option>
+                            <option value="meters">Meters (m)</option>
+                            <option value="kilometers">Kilometers (km)</option>
+                            <option value="inches">Inches (in)</option>
+                            <option value="feet">Feet (ft)</option>
+                            <option value="yards">Yards (yd)</option>
+                            <option value="miles" selected>Miles (mi)</option>
+                            <option value="nautical-miles">Nautical Miles</option>
+                        </select>
+                    </div>
+                    
+                    <div></div> <!-- Empty spacer -->
+                    
+                    <div class="unit-selector">
+                        <label for="toUnit">To Unit</label>
+                        <select id="toUnit">
+                            <option value="millimeters">Millimeters (mm)</option>
+                            <option value="centimeters">Centimeters (cm)</option>
+                            <option value="meters">Meters (m)</option>
+                            <option value="kilometers" selected>Kilometers (km)</option>
+                            <option value="inches">Inches (in)</option>
+                            <option value="feet">Feet (ft)</option>
+                            <option value="yards">Yards (yd)</option>
+                            <option value="miles">Miles (mi)</option>
+                            <option value="nautical-miles">Nautical Miles</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="action-btns">
+                    <button class="btn btn-primary" id="convertBtn">
+                        <i class="fas fa-calculator"></i> Convert
+                    </button>
+                    <button class="btn btn-secondary" id="resetBtn">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+                
+                <div class="result-container" id="resultContainer">
+                    <div class="result-text">Conversion Result:</div>
+                    <div class="result-value" id="resultValue">0 kilometers</div>
+                    <div class="result-formula" id="resultFormula"></div>
+                </div>
+            </div>
+            
+            <table class="conversion-table">
+                <thead>
+                    <tr>
+                        <th>Unit</th>
+                        <th>Abbreviation</th>
+                        <th>Equivalent in Meters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Millimeter</td>
+                        <td>mm</td>
+                        <td>0.001 m</td>
+                    </tr>
+                    <tr>
+                        <td>Centimeter</td>
+                        <td>cm</td>
+                        <td>0.01 m</td>
+                    </tr>
+                    <tr>
+                        <td>Meter</td>
+                        <td>m</td>
+                        <td>1 m</td>
+                    </tr>
+                    <tr>
+                        <td>Kilometer</td>
+                        <td>km</td>
+                        <td>1000 m</td>
+                    </tr>
+                    <tr>
+                        <td>Inch</td>
+                        <td>in</td>
+                        <td>0.0254 m</td>
+                    </tr>
+                    <tr>
+                        <td>Foot</td>
+                        <td>ft</td>
+                        <td>0.3048 m</td>
+                    </tr>
+                    <tr>
+                        <td>Yard</td>
+                        <td>yd</td>
+                        <td>0.9144 m</td>
+                    </tr>
+                    <tr>
+                        <td>Mile</td>
+                        <td>mi</td>
+                        <td>1609.344 m</td>
+                    </tr>
+                    <tr>
+                        <td>Nautical Mile</td>
+                        <td>nmi</td>
+                        <td>1852 m</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-info-circle"></i> How to Use This Converter</h3>
+                <ol>
+                    <li>Enter the value you want to convert in the "Value" field</li>
+                    <li>Select the unit you're converting from in the "From Unit" dropdown</li>
+                    <li>Select the unit you want to convert to in the "To Unit" dropdown</li>
+                    <li>Click the "Convert" button to see the result</li>
+                    <li>Use the swap button (<i class="fas fa-exchange-alt"></i>) to quickly switch between units</li>
+                </ol>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 Ultimate Length Converter | All Rights Reserved</p>
+        </footer>
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>

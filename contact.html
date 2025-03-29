@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - UnitMagic Converter</title>
+    <style>
+        @font-face {
+            font-family: "Poppins";
+            src: url(Poppins/Poppins-Regular.ttf);
+        }
+        body { font-family: Arial; max-width: 600px; margin: 0 auto; padding: 20px; }
+        nav { background: #4361ee; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .form-group { margin-bottom: 15px; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; }
+        button { background: #4361ee; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav style="background: #4361ee; padding: 10px; font-family: Poppins;">
+        <a href="index.html" style="color: white; margin: 0 10px; text-decoration: none;">Home</a>
+        <a href="about.html" style="color: white; margin: 0 10px; text-decoration: none;">About</a>
+        <a href="contact.html" style="color: white; margin: 0 10px; text-decoration: none;">Contact</a>
+        <a href="privacy.html" style="color: white; margin: 0 10px; text-decoration: none;">Privacy</a>
+    </nav>   
+
+    <h1 style="font-family: Poppins;">Contact Us</h1>
+    
+    <!-- Simple Form (Works without backend) -->
+    <form action="mailto:abdulrehman6908@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group" style="font-family: Poppins;">
+            <label>Your Name:</label>
+            <input type="text" name="name" required>
+        </div>
+        
+        <div class="form-group" style="font-family: Poppins;">
+            <label>Email:</label>
+            <input type="email" name="email" required>
+        </div>
+        
+        <div class="form-group" style="font-family: Poppins;">
+            <label>Message:</label>
+            <textarea name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit" style="font-family: Poppins;">Send Message</button>
+    </form>
+
+    <p style="font-family: Poppins;">Or email directly: <a href="mailto:abdulrehman6908@gmail.com">abdulrehman6908@gmail.com</a></p>
+</body>
+</html>
